@@ -9,7 +9,20 @@
   },
   "dependencies": {
     "next": "10.2.0",
+    "next-images": "^1.7.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "styled-components": "^5.2.3"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@svgr/webpack": "^5.5.0",
+    "@types/node": "^15.0.1",
+    "@types/react": "^17.0.4",
+    "@types/styled-components": "^5.1.9",
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "babel-plugin-styled-components": "^1.12.0",
+    "typescript": "^4.2.4",
+    "url-loader": "^4.1.1"
   }
 }
