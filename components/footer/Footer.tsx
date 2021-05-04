@@ -1,60 +1,21 @@
+import { WrapperLogo } from "components/header/styles";
+import React from "react";
 import styled from "styled-components";
-import Logo from "../../assets/images/Logo.svg";
-import {WrapperLogo} from "../Header";
-import ScrollIcon from "../../assets/images/scroll-horitontal.svg";
+import Logo from "../../images/Logo.svg";
+
+import ScrollIcon from "../../images/scroll-horitontal.svg";
+import { ContainerFooter, MainContenFooter, ProjectByBox, ScrollBox } from "./styles";
 
 
-export const ContainerFooter = styled.footer`
-  max-width: 1040px;
-  margin: auto;
-`
-export const MainContenFooter = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: baseline;
-  font-size: 16px;
-
-  p {
-    margin-top: 0;
-    margin-bottom: 42px;
-  }
-
-  ul {
-    text-decoration: unset;
-    list-style-type: none;
-    color: var(--text-black);
-    padding: 0;
-  }
-
-  li {
-    line-height: 40px;
-  }
-`
-export const ProjectByBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-`
-export const ScrollBox = styled.div`
-  display: flex;
-  align-items: center;
-
-  svg {
-    margin-right: 16px;
-  }
-`
 
 const scrollTop = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
 };
 
-
 export const Footer = () => {
     const getCurrentYear = () => {
         return new Date().getFullYear();
     };
-
 
     return (
         <>
@@ -85,7 +46,7 @@ export const Footer = () => {
                     <div>
                         <p>Community</p>
                         <ul>
-                            <li>Musicians</li>
+                            <li>albumsians</li>
                             <li>Bands</li>
                             <li>Forum</li>
                             <li>Social Media</li>

@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import BasicLayout from "layout/Basic";
+import BasicLayout from "../layout/Basic";
 import Head from 'next/head'
 import {Listen} from "../components/listen/Listen";
-import {BestQuality, ContainerBestQuality} from "../components/best-quality/BestQuality";
+import {BestQuality} from "../components/best-quality/BestQuality";
+import {NextPageContext} from "next";
 
 
 
@@ -11,17 +12,17 @@ const Title = styled.h1`
 `;
 
 // @ts-ignore
-const Home = ({music}) => {
-    console.log(music);
+const Home = ({albums}) => {
+
     return (
         <>
             <Head>
-                <title>Hello</title>
+                <title>Muse.ic</title>
                 <meta name='some text' content='work task'/>
             </Head>
             <BasicLayout>
                 <Listen />
-                <BestQuality music={music}/>
+                <BestQuality albums={albums}/>
             </BasicLayout>
         </>
     )
@@ -29,13 +30,13 @@ const Home = ({music}) => {
 
 export default Home;
 
-export const getStaticProps = async  () => {
+export const getStaticProps = async  ({req}: NextPageContext) => {
     const  res = await  fetch(`https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`)
-    const music = await  res.json()
+    const albums = await  res.json()
 
     return {
         props: {
-            music
+            albums
         }
     }
 }
