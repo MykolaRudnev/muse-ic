@@ -20,9 +20,29 @@ export const ChangeResolution = (url: String) => {
     const res = str.replace("100x100", "600x600")
     return res;
 }
+
+
+const ReadMore = ({ children }:any) => {
+    const text = children;
+    const [isReadMore, setIsReadMore] = useState(true);
+    const toggleReadMore = () => {
+        setIsReadMore(!isReadMore);
+    };
+    return (
+        <p className='description-album'>
+            {isReadMore ? text.slice(0, 115) : text}
+            <span onClick={toggleReadMore} className="read-or-hide">
+
+          {isReadMore ? <p className="see-more">Find out more</p> : <p className="see-more">Find out less</p>}
+
+      </span>
+        </p>
+    );
+};
+
+
 // @ts-ignore
 export const SliderAlbum = ({albums}) => {
-    console.log(albums)
     const [oldSlide, setOldSlide] = useState(0);
     const [activeSlide, setActiveSlide] = useState(1);
 
@@ -38,11 +58,32 @@ export const SliderAlbum = ({albums}) => {
         nextArrow: <SampleNextArrow/>,
         prevArrow: <SamplePrevArrow/>,
         className: 'center',
+        autoplay: true,
+        autoplaySpeed: 10000,
         beforeChange: (current: any, next: any) => {
             setOldSlide(current + 1);
             setActiveSlide(next + 1);
         },
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1.5,
+                    slidesToScroll: 1.5,
+                }
+            },
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            }
+
+        ]
     };
+
 
 
     return (
@@ -61,7 +102,12 @@ export const SliderAlbum = ({albums}) => {
                                 </div>
                                 <div>
                                     <span className='genre-date'>{albums.primaryGenreName} • {albums.releaseDate.substring(0, 4)}</span>
+                                    <ReadMore >
+                                        There’s an audacity to the way the Arctic Monkeys' fifth album gathers disparate musical threads—West Coast hip-hop, heavy ’70s rock—into something that
+                                        feels so assured, inevitable and outrageously enjoyable. From biker-gang stomp of “Do I Wanna
+                                    </ReadMore>
                                 </div>
+
                             </CardOfAlbum>
                         )
                     )}

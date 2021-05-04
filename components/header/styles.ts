@@ -1,19 +1,29 @@
 import styled from "styled-components";
+import {media} from "layout/theme";
 
 export const PageHeader = styled.header`
   display: flex;
   flex-direction: row;
   align-items: center;
   padding-top: 70px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1220px;
+  margin: auto;
 
-  margin: 0 110px;
-  justify-content: space-between
+  ${media.down("xl")} {
+    margin: 0 16px;
+  }
 `
 export const WrapperLogo = styled.div`
   display: flex;
   align-items: center;
   align-content: baseline;
   margin-right: 49px;
+
+  ${media.down("xl")} {
+    margin-bottom: 16px;
+  }
 
   span {
     color: #292930;
@@ -25,13 +35,19 @@ export const WrapperLogo = styled.div`
 `
 export const ContenHeader = styled.div`
   display: flex;
-  background: white;
   position: relative;
   z-index: 100;
-  border-radius: 20px;
+  flex-wrap: wrap;
+
+  ${media.down("xl")} {
+    margin-bottom: 16px;
+  }
 `
 export const WrapperNav = styled.div`
   width: 388px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 0 10px;
 
   ul {
     display: flex;
@@ -41,8 +57,26 @@ export const WrapperNav = styled.div`
     padding: 0px;
     list-style: none;
   }
+
+  svg {
+    margin-left: 14px;
+  }
+
+  ${media.down("xl")} {
+    width: 100%;
+  }
 `
 export const WrapperAction = styled.div`
   position: relative;
   z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  ${media.down("xl")} {
+    button {
+      background-color: var(--purple);
+      color: var(--white);
+    }
+  }
 `

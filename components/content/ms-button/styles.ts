@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {INKButtonProps} from './interfaces';
+import {media} from "layout/theme";
 
 export const Button = styled.button<INKButtonProps>`
   height: auto;
@@ -41,4 +42,9 @@ export const Button = styled.button<INKButtonProps>`
   &:focus {
     outline: 0;
   }
+
+  ${media.down("xl")} {
+  padding: 14px 30px;
+  font-size: 14px;
+}
 `;

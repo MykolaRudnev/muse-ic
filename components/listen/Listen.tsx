@@ -12,7 +12,7 @@ export const Listen = () => {
                 <img src={Img}/>
                 <WrapperContentListen>
                     <h1>Listen Like Never Before.</h1>
-                    <p>We offer albums in 100x better quality than our competitors. Say good bye to FLAC 👋</p>
+                    <p>We offer music in 100x better quality than our competitors. Say good bye to FLAC 👋</p>
                     <WrapperActionListen>
                         <MSButton buttonStyle={"purple"} text='Get Started'/>
                         <div>

@@ -1,4 +1,5 @@
 import Logo from '../../images/Logo.svg'
+import DownArrow from '../../images/arrow-stroke.svg'
 import {MSButton} from "../content/ms-button";
 import {PageHeader,ContenHeader,WrapperLogo,WrapperNav, WrapperAction} from './styles'
 
@@ -24,7 +25,7 @@ export const Header = () => {
                                     Library
                                 </li>
                                 <li>
-                                    Explore
+                                    Explore<DownArrow/>
                                 </li>
                             </ul>
                         </nav>

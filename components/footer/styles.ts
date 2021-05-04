@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import {media} from "layout/theme";
 
 export const ContainerFooter = styled.footer`
-  max-width: 1040px;
+  padding-top: 86px;
+  max-width: 1000px;
   margin: auto;
 `
 export const MainContenFooter = styled.div`
@@ -26,6 +28,18 @@ export const MainContenFooter = styled.div`
   li {
     line-height: 40px;
   }
+
+  ${media.down("xl")} {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+}
 `
 export const ProjectByBox = styled.div`
   display: flex;
