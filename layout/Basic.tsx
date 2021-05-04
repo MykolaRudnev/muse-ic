@@ -1,10 +1,8 @@
 import {createGlobalStyle} from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`@font-face {
+export const GlobalStyle = createGlobalStyle`
   
   
-}
-
   html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -41,6 +39,13 @@ export const GlobalStyle = createGlobalStyle`@font-face {
   }
   #root {
     overflow: auto;
+
+  }
+  :root {
+    --white:#FFFFFF;
+    --text-black:#292930;
+    --purple: #5956E9;
+    --text-gray:#999FAE;
   }
   
 `;

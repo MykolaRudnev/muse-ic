@@ -2,9 +2,8 @@ import styled from 'styled-components';
 import {INKButtonProps} from './interfaces';
 
 export const Button = styled.button<INKButtonProps>`
-  width: 100%;
   height: auto;
-  padding: 29px 46px;
+  padding: 24px 47px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 20px;
@@ -32,7 +31,7 @@ export const Button = styled.button<INKButtonProps>`
   color: #2522BA;
   border: 0;
   &:hover {
-    background-color: background: #E6E5FF;
+    background-color: #E6E5FF;
   }
   `}
   &:active {
