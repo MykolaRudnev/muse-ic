@@ -4,6 +4,7 @@ import Head from 'next/head'
 import {Listen} from "../components/listen/Listen";
 import {BestQuality} from "../components/best-quality/BestQuality";
 import {NextPageContext} from "next";
+import {Subscribe} from "../components/subscribe/Subscribe";
 
 
 
@@ -24,6 +25,7 @@ const Home = ({albums}) => {
                 <Listen />
                 <BestQuality albums={albums}/>
             </BasicLayout>
+            <Subscribe />
         </>
     )
 }

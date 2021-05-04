@@ -5,15 +5,12 @@ import Rectangle from '../../../../images/Rectangle.svg'
 import React, {FunctionComponent, useState} from "react";
 import {CardOfAlbum, NextArrow, PrevArrow, QuantityWrapper, WrapperSlider} from "./styles";
 
-
 const SampleNextArrow: FunctionComponent<{ currentSlide?: number, slideCount?: number, children?: any }> = ({currentSlide, slideCount, children, ...props}) => (
     <NextArrow {...props}> {children}</NextArrow>);
-
 
 const SamplePrevArrow: FunctionComponent<{ currentSlide?: number, slideCount?: number, children?: any }> = ({currentSlide, slideCount, children, ...props}) => (
     <PrevArrow {...props}> {children} </PrevArrow>
 );
-
 
 export const ChangeResolution = (url: String) => {
     const str = url;
@@ -21,8 +18,7 @@ export const ChangeResolution = (url: String) => {
     return res;
 }
 
-
-const ReadMore = ({ children }:any) => {
+const ReadMore = ({children}: any) => {
     const text = children;
     const [isReadMore, setIsReadMore] = useState(true);
     const toggleReadMore = () => {
@@ -85,7 +81,6 @@ export const SliderAlbum = ({albums}) => {
     };
 
 
-
     return (
         <>
             <QuantityWrapper>
@@ -93,8 +88,10 @@ export const SliderAlbum = ({albums}) => {
             </QuantityWrapper>
             <WrapperSlider>
                 <Slider {...settings}>
+
                     {albums.results.map((albums: any) => (
-                            <CardOfAlbum key={albums.key}>
+
+                            <CardOfAlbum key={albums.collectionId}>
                                 <img src={ChangeResolution(albums.artworkUrl100)}></img>
                                 <div>
                                     <p className='collection-name'>{albums.collectionCensoredName}</p>
@@ -102,7 +99,7 @@ export const SliderAlbum = ({albums}) => {
                                 </div>
                                 <div>
                                     <span className='genre-date'>{albums.primaryGenreName} • {albums.releaseDate.substring(0, 4)}</span>
-                                    <ReadMore >
+                                    <ReadMore>
                                         There’s an audacity to the way the Arctic Monkeys' fifth album gathers disparate musical threads—West Coast hip-hop, heavy ’70s rock—into something that
                                         feels so assured, inevitable and outrageously enjoyable. From biker-gang stomp of “Do I Wanna
                                     </ReadMore>
