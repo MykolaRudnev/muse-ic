@@ -59,14 +59,11 @@ export default  function SliderAlbum ({albums:serverAlbum}:AlbumPost)  {
             load()
         }
     },[])
-        if(!albums){
+    if (!albums) {
             return <>
             <p>Loading ...</p>
             </>
         }
-        console.log(albums)
-
-
     const settings = {
         infinite: true,
         slidesToShow: 2,
