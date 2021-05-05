@@ -15,7 +15,8 @@ export const MainContenFooter = styled.div`
   justify-content: space-evenly;
   align-items: baseline;
   font-size: 16px;
-
+  padding-bottom: 51px;
+  border-bottom: 1px solid #E3E6E9;
   p {
     margin-top: 0;
     margin-bottom: 42px;
@@ -36,18 +37,23 @@ export const MainContenFooter = styled.div`
     flex-direction: column;
     text-align: center;
     align-items: center;
+    padding-bottom: 26px;
+    p {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
   }
 
-  p {
-    margin-top: 0;
-    margin-bottom: 12px;
-  }
 }
 `
 export const ProjectByBox = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 14px;
+  margin-top:24px;
+  ${media.down("xl")} {
+    margin-top:16px;
+  }
 `
 export const ScrollBox = styled.div`
   display: flex;
