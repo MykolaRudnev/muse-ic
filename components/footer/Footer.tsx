@@ -1,6 +1,5 @@
 import { WrapperLogo } from "components/header/styles";
 import React from "react";
-import styled from "styled-components";
 import Logo from "../../images/Logo.svg";
 
 import ScrollIcon from "../../images/scroll-horitontal.svg";
