@@ -1,7 +1,7 @@
 export  interface IAlbums {
   results :{
     id:string | number
-    resultCount:string | number
+    resultCount:number
     artworkUrl100: string| number
     collectionCensoredName: string
     artistName:string
