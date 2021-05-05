@@ -1,17 +1,10 @@
-import styled from "styled-components";
-import BasicLayout from "../layout/Basic";
+import BasicLayout from "layout/Basic";
 import Head from 'next/head'
 import {Listen} from "components/listen/Listen";
 import {BestQuality} from "components/best-quality/BestQuality";
 import {NextPageContext} from "next";
 import {Subscribe} from "components/subscribe/Subscribe";
 import {MoreListeners} from "components/more-listeners/MoreListeners";
-
-
-
-const Title = styled.h1`
-  color: white;
-`;
 
 // @ts-ignore
 const Home = ({albums}) => {
