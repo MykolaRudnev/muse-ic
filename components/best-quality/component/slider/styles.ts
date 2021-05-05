@@ -8,10 +8,12 @@ export const WrapperSlider = styled.div`
   padding-left: 470px;
   margin-bottom: 5rem;
   background: linear-gradient(90deg, #27272E 78.53%, rgba(39, 39, 46, 0) 100%);
-  ${media.down("md")} {
-    padding-left: 0;
+  ${media.down("xl")} {
+    padding-left: 300px;
   }
-  ${media.down("md")} { {
+  ${media.down("md")} {
+
+    padding-left: 0;
     .slick-prev, .slick-next {
       bottom: -10%;
       top: unset;
@@ -87,7 +89,11 @@ export const NextArrow = styled.div`
     opacity: 1;
   }
   ${media.down("md")} {{
+
     left: 60%;
+    &:before {
+      display: none;
+    }
   }}
 
 `
@@ -101,7 +107,11 @@ export const PrevArrow = styled.div`
     opacity: 1;
   }
   ${media.down("md")} {{
+   
     left: 30%;
+    &:before {
+      display: none;
+    }
   }}
 `
 export const QuantityWrapper = styled.div`
@@ -114,8 +124,11 @@ export const QuantityWrapper = styled.div`
   bottom: 360px;
   left: 212px;
   position: absolute;
-
-  ${media.down("md")} {{
+  ${media.down("xl")} {
+    bottom: 300px;
+    left: 40px;
+  }
+  ${media.down("md")} {
     bottom: -2%;
   left: 33%;
 }

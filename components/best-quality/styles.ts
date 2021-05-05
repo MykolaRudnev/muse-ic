@@ -54,7 +54,9 @@ export const TopContentSecondRow = styled.div`
     opacity: 0.5;
     margin: 0 0 45px;
   }
-
+  ${media.down("xl")} {
+    margin-left: 40px;
+  }
   ${media.down("md")} {
     margin-left: 6px;
 

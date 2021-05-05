@@ -73,11 +73,7 @@ export const WrapperAction = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  ${media.down("xl")} {
-    width: 100%;  
-    button {
-      background-color: var(--purple);
-      color: var(--white);
-    }
+  ${media.down("lg")} {
+    width: 100%;
   }
 `

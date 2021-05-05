@@ -23,6 +23,8 @@ export const ContainerListen = styled.div`
     z-index: 2;
   }
 
+  
+  
   ${media.down("xl")} {
     height: 100%;
     margin: 46px auto auto;
@@ -37,15 +39,20 @@ export const ContainerListen = styled.div`
       right: 0;
 
       display: inline-block;
-      width: 50%;
-      height: 55%;
+      width: 80%;
+      height: 70%;
       content: "";
     }
 
     img {
-      top: 300px;
-      width: 50%;
-      height: 50%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    ${media.down("md")} {
+      &:after {
+        height: 55%;
+      }
     }
   }
 `
