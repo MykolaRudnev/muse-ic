@@ -135,10 +135,3 @@ export default  function SliderAlbum ({albums:serverAlbum}:AlbumPost)  {
     )
 }
 
-SliderAlbum.getInitialProps = async  ({req}: NextPageContext) => {
-    const  res = await  fetch(`https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`)
-    const albums = await  res.json()
-    return {
-        albums
-    }
-}

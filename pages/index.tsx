@@ -26,3 +26,13 @@ const Home = ({results}:AlbumPost) => {
 
 export default Home;
 
+export const getStaticProps = async () => {
+    const  res = await  fetch(`https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`)
+    const albums = await  res.json()
+    return {
+        props: {
+            albums
+        }
+
+    }
+}
