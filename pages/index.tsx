@@ -4,8 +4,9 @@ import {Listen} from "components/listen/Listen";
 import {BestQuality} from "components/best-quality/BestQuality";
 import {Subscribe} from "components/subscribe/Subscribe";
 import {MoreListeners} from "components/more-listeners/MoreListeners";
+import {AlbumPost} from "../interfaces/albums";
 
-const Home = () => {
+const Home = ({results}:AlbumPost) => {
 
     return (
         <>
@@ -15,7 +16,7 @@ const Home = () => {
             </Head>
             <BasicLayout>
                 <Listen />
-                <BestQuality />
+                <BestQuality  results={results}/>
             </BasicLayout>
             <Subscribe />
             <MoreListeners/>

@@ -1,10 +1,12 @@
 import SliderAlbum from "./component/slider/SliderAlbum";
 import { ContentBestQuality, TopContent, TopContentFirsRow, TopContentSecondRow } from "./styles";
 import { ContainerBestQuality } from "./styles";
+import {NextPageContext} from "next";
+import {AlbumPost} from "../../interfaces/albums";
 
 
 
-export const BestQuality = () => {
+export const BestQuality = ({results}:AlbumPost) => {
     return (
         <>
             <ContainerBestQuality>
@@ -19,7 +21,7 @@ export const BestQuality = () => {
                         </TopContentSecondRow>
                     </TopContent>
                     {/*//how to make this not required ??//*/}
-                    <SliderAlbum />
+                    <SliderAlbum results={results} />
                 </ContentBestQuality>
             </ContainerBestQuality>
 
