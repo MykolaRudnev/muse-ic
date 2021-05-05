@@ -3,9 +3,10 @@ import HeroImg from "../../images/HeroImage.png";
 import {media} from "layout/theme";
 
 export const ContainerListen = styled.div`
-  height: 755px;
+  height: 100%;
   max-width: 1440px;
-  margin: auto;
+  margin: 105px auto auto;
+
   &:after {
     content: url("${HeroImg}");
     display: block;
@@ -24,7 +25,7 @@ export const ContainerListen = styled.div`
 
   ${media.down("xl")} {
     height: 100%;
-
+    margin: 46px auto auto;
     &:after {
       margin-bottom: 16px;
       background-image: url("${HeroImg}");
@@ -61,7 +62,7 @@ export const WrapperContentListen = styled.div`
     line-height: 99.33%;
     letter-spacing: -0.025em;
     color: var(--text-black);
-
+    margin: 0;
   }
 
   ${media.down("xl")} {
@@ -106,7 +107,8 @@ export const WrapperScroll = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 99px;
+  margin-bottom: 100px;
   width: 100%;
   max-width: 160px;
   font-size: min(max(14px, 4vw), 16px);

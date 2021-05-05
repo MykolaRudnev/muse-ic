@@ -69,11 +69,12 @@ export const WrapperNav = styled.div`
 export const WrapperAction = styled.div`
   position: relative;
   z-index: 100;
-  width: 100%;
+
   display: flex;
   justify-content: flex-end;
 
   ${media.down("xl")} {
+    width: 100%;  
     button {
       background-color: var(--purple);
       color: var(--white);

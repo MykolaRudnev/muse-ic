@@ -5,6 +5,9 @@ export const ContainerFooter = styled.footer`
   padding-top: 86px;
   max-width: 1000px;
   margin: auto;
+  ${media.down("xl")} {
+    padding-top: 40px;
+  }
 `
 export const MainContenFooter = styled.div`
   display: flex;

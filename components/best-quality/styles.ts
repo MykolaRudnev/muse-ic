@@ -44,6 +44,7 @@ export const TopContentSecondRow = styled.div`
     font-size: 80px;
     line-height: 100%;
     margin-bottom: 48px;
+    letter-spacing: -0.025em;
   }
 
   p {
