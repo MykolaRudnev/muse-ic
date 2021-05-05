@@ -1,10 +1,10 @@
-import {SliderAlbum} from "./component/slider/SliderAlbum";
+import SliderAlbum from "./component/slider/SliderAlbum";
 import { ContentBestQuality, TopContent, TopContentFirsRow, TopContentSecondRow } from "./styles";
 import { ContainerBestQuality } from "./styles";
 
 
-// @ts-ignore
-export const BestQuality = ({albums}) => {
+
+export const BestQuality = () => {
     return (
         <>
             <ContainerBestQuality>
@@ -18,7 +18,8 @@ export const BestQuality = ({albums}) => {
                             <p>Over 100 years of research has led us to develop new quality, which is 100x times better than FLAC.</p>
                         </TopContentSecondRow>
                     </TopContent>
-                    <SliderAlbum albums={albums}/>
+                    {/*//how to make this not required ??//*/}
+                    <SliderAlbum />
                 </ContentBestQuality>
             </ContainerBestQuality>
 

@@ -2,8 +2,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Rectangle from '../../../../images/Rectangle.svg'
-import React, {FunctionComponent, useState} from "react";
+import React, {FunctionComponent, useEffect, useState} from "react";
 import {CardOfAlbum, NextArrow, PrevArrow, QuantityWrapper, WrapperSlider} from "./styles";
+import {NextPageContext} from "next";
+import {AlbumPost} from "interfaces/albums";
+
+
+
+
 
 const SampleNextArrow: FunctionComponent<{ currentSlide?: number, slideCount?: number, children?: any }> = ({currentSlide, slideCount, children, ...props}) => (
     <NextArrow {...props}> {children}</NextArrow>);
@@ -36,15 +42,32 @@ const ReadMore = ({children}: any) => {
     );
 };
 
-
 // @ts-ignore
-export const SliderAlbum = ({albums}) => {
+export default  function SliderAlbum ({albums:serverAlbum}:AlbumPost)  {
     const [oldSlide, setOldSlide] = useState(0);
     const [activeSlide, setActiveSlide] = useState(1);
+    const [albums, serAlbums] = useState(serverAlbum)
+
+    useEffect(() => {
+        async function load() {
+            const  res = await  fetch(`https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`)
+            const data = await  res.json()
+
+            serAlbums(data)
+        }
+        if(!serverAlbum) {
+            load()
+        }
+    },[])
+        if(!albums){
+            return <>
+            <p>Loading ...</p>
+            </>
+        }
+        console.log(albums)
 
 
-    // @ts-ignore
-    var settings = {
+    const settings = {
         infinite: true,
         slidesToShow: 2,
         focusOnSelect: true,
@@ -115,3 +138,10 @@ export const SliderAlbum = ({albums}) => {
     )
 }
 
+SliderAlbum.getInitialProps = async  ({req}: NextPageContext) => {
+    const  res = await  fetch(`https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`)
+    const albums = await  res.json()
+    return {
+        albums
+    }
+}

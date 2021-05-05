@@ -6,8 +6,7 @@ import {NextPageContext} from "next";
 import {Subscribe} from "components/subscribe/Subscribe";
 import {MoreListeners} from "components/more-listeners/MoreListeners";
 
-// @ts-ignore
-const Home = ({albums}) => {
+const Home = () => {
 
     return (
         <>
@@ -17,7 +16,7 @@ const Home = ({albums}) => {
             </Head>
             <BasicLayout>
                 <Listen />
-                <BestQuality albums={albums}/>
+                <BestQuality />
             </BasicLayout>
             <Subscribe />
             <MoreListeners/>
@@ -27,13 +26,3 @@ const Home = ({albums}) => {
 
 export default Home;
 
-export const getStaticProps = async  ({req}: NextPageContext) => {
-    const  res = await  fetch(`https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`)
-    const albums = await  res.json()
-
-    return {
-        props: {
-            albums
-        }
-    }
-}
