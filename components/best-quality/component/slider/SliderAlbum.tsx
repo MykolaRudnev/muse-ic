@@ -84,8 +84,8 @@ export default  function SliderAlbum ({albums:serverAlbum}:AlbumPost)  {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 1.5,
-                    slidesToScroll: 1.5,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
                 }
             },
             {
@@ -104,7 +104,7 @@ export default  function SliderAlbum ({albums:serverAlbum}:AlbumPost)  {
     return (
         <>
             <QuantityWrapper>
-                <span>0{activeSlide}</span><Rectangle/> <span>0{albums.resultCount}</span>
+                <span>0{activeSlide}</span><Rectangle/> <span>0{ albums.resultCount}</span>
             </QuantityWrapper>
             <WrapperSlider>
                 <Slider {...settings}>

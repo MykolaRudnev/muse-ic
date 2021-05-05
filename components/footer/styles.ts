@@ -12,11 +12,13 @@ export const ContainerFooter = styled.footer`
 export const MainContenFooter = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: baseline;
   font-size: 16px;
   padding-bottom: 51px;
   border-bottom: 1px solid #E3E6E9;
+  max-width: 904px;
+  margin: auto;
   p {
     margin-top: 0;
     margin-bottom: 42px;

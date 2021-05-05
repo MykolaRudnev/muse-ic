@@ -23,11 +23,11 @@ export const ContainerListen = styled.div`
     z-index: 2;
   }
 
-  
-  
+
   ${media.down("xl")} {
     height: 100%;
     margin: 46px auto auto;
+
     &:after {
       margin-bottom: 16px;
       background-image: url("${HeroImg}");
@@ -35,7 +35,7 @@ export const ContainerListen = styled.div`
       background-size: cover;
 
       position: absolute;
-      top: 300px;
+      top: 200px;
       right: 0;
 
       display: inline-block;
@@ -47,8 +47,9 @@ export const ContainerListen = styled.div`
     img {
       top: 0;
       width: 100%;
-      height: 100%;
+      height: 90%;
     }
+
     ${media.down("md")} {
       &:after {
         height: 55%;
@@ -64,8 +65,8 @@ export const WrapperContentListen = styled.div`
   z-index: 100;
 
   h1 {
-    font-family: "DM Sans" ,sans-serif;
-    font-size:  96px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 96px;
     line-height: 99.33%;
     letter-spacing: -0.025em;
     color: var(--text-black);
@@ -76,12 +77,17 @@ export const WrapperContentListen = styled.div`
     margin-left: 5vw;
 
     h1 {
-      font-size:60px;
       width: 30%;
     }
 
     p {
       width: 40%;
+    }
+  }
+
+  ${media.down("md")} {
+    h1 {
+      font-size: 60px;
     }
   }
 
@@ -91,6 +97,7 @@ export const WrapperActionListen = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
+
   a {
     text-decoration: unset;
   }
@@ -103,6 +110,7 @@ export const WrapperActionListen = styled.div`
     flex-direction: column;
     align-items: start;
     margin-top: 20px;
+
     button {
       margin-bottom: 8px;
     }

@@ -58,6 +58,16 @@ export const WrapperNav = styled.div`
     list-style: none;
   }
 
+  li {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+
+    &:hover {
+      cursor: pointer;
+      border-bottom: 2px solid #999FAE;
+    }
+  }
+
   svg {
     margin-left: 14px;
   }
