@@ -46,14 +46,14 @@ const ReadMore = ({children}: any) => {
 export default  function SliderAlbum ({albums:serverAlbum}:AlbumPost)  {
     const [oldSlide, setOldSlide] = useState(0);
     const [activeSlide, setActiveSlide] = useState(1);
-    const [albums, serAlbums] = useState(serverAlbum)
+    const [albums, setAlbums] = useState(serverAlbum)
 
     useEffect(() => {
         async function load() {
             const  res = await  fetch(`https://itunes.apple.com/search?term=arctic+monkeys&entity=album&limit=7`)
             const data = await  res.json()
 
-            serAlbums(data)
+            setAlbums(data)
         }
         if(!serverAlbum) {
             load()
